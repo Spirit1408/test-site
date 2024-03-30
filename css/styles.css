@@ -65,6 +65,10 @@ address {
 
 /*--------------------HEADER--------------------*/
 
+.header-line{
+    position: relative;
+}
+
 .navigation {
     display: flex;
     align-items: center;
@@ -115,7 +119,7 @@ address {
 /*--------------------MENU--------------------*/
 
 .menu {
-    position: absolute;
+    position: fixed;
     display: flex;
     top: 0;
     right: 0;
@@ -125,7 +129,6 @@ address {
     padding: 20px;
     flex-direction: column;
     visibility: hidden;
-    transform: translateX(100%);
     opacity: 0;
     transition: 0.3s ease-out;
 }
@@ -133,7 +136,6 @@ address {
 .is-open {
     visibility: visible;
     opacity: 1;
-    transform: translateX(0%);
 }
 
 .menu-close {
