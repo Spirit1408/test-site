@@ -141,7 +141,7 @@
                     <div class="main-links">
                         <button
                             type="button"
-                            class="main-btn">
+                            class="main-btn" id="main-btn">
                             Buy now
                         </button>
 
@@ -848,7 +848,7 @@
 
                 <button
                     type="button"
-                    class="reviews-btn">
+                    class="reviews-btn" id="reviews-btn">
                     Leave a review
                 </button>
             </section>
@@ -984,6 +984,114 @@
             </div>
         </footer>
 
+        <div class="review-window" id="review-window">
+            <div class="review-form-block">
+                <button class="form-close-btn" id="form-close-btn">
+                    <svg class="form-close-icon">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+
+                <h2 class="review-form-title">
+                    leave a review about
+                    <span class="accent">our chocolate</span>
+                </h2>
+
+                <form class="review-form" id="review-form">
+                    <ul class="form-field-list">
+                        <li class="form-field-item">
+                            <label class="field-item-label">
+                                Name
+                                <input
+                                    type="text"
+                                    class="form-input"
+                                    name="form-name"
+                                    id="form-name"
+                                    required />
+                            </label>
+
+                            <svg class="form-icon">
+                                <use href="./images/icons.svg#icon-user"></use>
+                            </svg>
+                        </li>
+
+                        <li class="form-field-item">
+                            <label class="field-item-label">
+                                Email
+                                <input
+                                    type="email"
+                                    class="form-input"
+                                    name="form-email"
+                                    id="form-email"
+                                    required />
+                            </label>
+
+                            <svg class="form-icon">
+                                <use href="./images/icons.svg#icon-mail"></use>
+                            </svg>
+                        </li>
+
+                        <li class="form-field-item">
+                            <label class="field-item-label">
+                                Phone number
+                                <input
+                                    type="tel"
+                                    class="form-input"
+                                    name="form-number"
+                                    id="form-number" />
+                            </label>
+
+                            <svg class="form-icon">
+                                <use href="./images/icons.svg#icon-phone"></use>
+                            </svg>
+                        </li>
+
+                        <li class="form-field-item">
+                            <label class="field-item-label">
+                                Comment
+                                <textarea
+                                    type="textarea"
+                                    class="form-input form-comment"
+                                    name="form-comment"
+                                    id="form-comment"
+                                    placeholder="Enter text"></textarea>
+                            </label>
+                        </li>
+                    </ul>
+
+                    <input
+                        class="policy-checkbox visually-hidden"
+                        type="checkbox"
+                        name="form-policy"
+                        id="form-policy"
+                        value="true"
+                        required />
+
+                    <label
+                        class="policy-label"
+                        for="form-policy">
+                        <span class="form-checkbox">
+                            <svg class="icon-check">
+                                <use href="./images/icons.svg#icon-check"></use>
+                            </svg>
+                        </span>
+                        <div>
+                            I accept the terms and conditions of the
+                            <a class="form-policy-link" href="#">Privacy Policy</a>
+                        </div>
+                    </label>
+
+                    <button
+                        type="submit"
+                        class="form-submit-btn"
+                        id="form-submit-btn">
+                        Send
+                    </button>
+                </form>
+            </div>
+        </div>
+
         <script src="./js/index.js"></script>
+        <script src="./js/form-logic.js"></script>
     </body>
 </html>

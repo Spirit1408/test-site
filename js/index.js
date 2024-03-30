@@ -1,8 +1,12 @@
 let menuButton = document.getElementById("menu-btn");
 let menuWindow = document.getElementById("menu-window");
 let menuCloseButton = document.getElementById("menu-close-btn");
+let mainButton = document.getElementById("main-btn");
 let cardButtons = document.querySelectorAll(".tastes-item-btn");
 let overlays = document.querySelectorAll(".tastes-card");
+let formButton = document.getElementById("reviews-btn");
+let formWindow = document.getElementById("review-window");
+let formCloseButton = document.getElementById("form-close-btn");
 
 menuButton.addEventListener("click", function () {
     menuWindow.classList.toggle("is-open");
@@ -35,15 +39,22 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
 });
 
+mainButton.addEventListener("click", scrollToSection);
+
+function scrollToSection() {
+    let productsSection = document.getElementById("products");
+    productsSection.scrollIntoView({ behavior: "smooth" });
+}
+
 // Объявляем переменную для хранения текущего открытого оверлея
 let currentOverlay = null;
 
 // Добавляем обработчик клика к каждой кнопке
 cardButtons.forEach((button, index) => {
-    button.addEventListener('click', (event) => {
+    button.addEventListener("click", (event) => {
         // Если текущий оверлей открыт и не является текущим оверлеем, скрываем его
         if (currentOverlay && currentOverlay !== overlays[index]) {
-            currentOverlay.classList.remove('called');
+            currentOverlay.classList.remove("called");
         }
 
         // Если текущий оверлей открыт и является текущим оверлеем, ничего не делаем
@@ -52,22 +63,33 @@ cardButtons.forEach((button, index) => {
         }
 
         // Добавляем класс для отображения оверлея
-        overlays[index].classList.add('called');
+        overlays[index].classList.add("called");
 
         // Обновляем текущий открытый оверлей
         currentOverlay = overlays[index];
 
         // Добавляем обработчик клика за пределами оверлея для его закрытия
         const closeOverlayOutside = (event) => {
-            if (!overlays[index].contains(event.target) && !cardButtons[index].contains(event.target)) {
+            if (
+                !overlays[index].contains(event.target) &&
+                !cardButtons[index].contains(event.target)
+            ) {
                 // Если клик произошел за пределами оверлея и кнопки, удаляем класс для скрытия оверлея
-                overlays[index].classList.remove('called');
+                overlays[index].classList.remove("called");
                 // Удаляем обработчик клика за пределами оверлея после закрытия
-                document.removeEventListener('click', closeOverlayOutside);
+                document.removeEventListener("click", closeOverlayOutside);
                 // Обнуляем текущий открытый оверлей
                 currentOverlay = null;
             }
         };
-        document.addEventListener('click', closeOverlayOutside);
+        document.addEventListener("click", closeOverlayOutside);
     });
+});
+
+formButton.addEventListener("click", function () {
+    formWindow.classList.toggle("form-open");
+});
+
+formCloseButton.addEventListener("click", function () {
+    formWindow.classList.toggle("form-open");
 });
