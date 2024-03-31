@@ -1079,13 +1079,16 @@ address {
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
     background: transparent;
     outline: none;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:hover,
 .form-input:focus,
 .form-input:active {
     border-color: #fd9222;
+    .form-icon {
+        stroke: #fd9222;
+    }
 }
 
 .form-comment {
