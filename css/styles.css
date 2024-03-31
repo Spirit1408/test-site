@@ -112,6 +112,13 @@ address {
     width: 28px;
     height: 28px;
     align-items: center;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-btn:hover .menu-icon,
+.menu-btn:active .menu-icon,
+.menu-btn:focus .menu-icon {
+    fill: #fd9222;
 }
 
 /*----------------------------------------------*/
@@ -157,6 +164,13 @@ address {
     width: 28px;
     height: 28px;
     stroke: #fff;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-close:hover .menu-close-icon,
+.menu-close:active .menu-close-icon,
+.menu-close:focus .menu-close-icon {
+    stroke: #fd9222;
 }
 
 .menu-list {
@@ -171,6 +185,13 @@ address {
     font-weight: 500;
     line-height: 1.14;
     color: #fff;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-item:hover,
+.menu-item:active,
+.menu-item:focus {
+    color: #fd9222;
 }
 
 .menu-social-list {
@@ -190,6 +211,13 @@ address {
     height: 20px;
     fill: transparent;
     stroke: #fff;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-social-item:hover .menu-social-icon,
+.menu-social-item:active .menu-social-icon,
+.menu-social-item:focus .menu-social-icon {
+    stroke: #fd9222;
 }
 
 /*--------------------------------------------*/
@@ -245,10 +273,28 @@ address {
     background: #fd9222;
     border: none;
     cursor: pointer;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-btn:hover,
+.main-btn:active,
+.main-btn:focus {
+    background: #fcf1e0;
+    color: #fd9222;
 }
 
 .main-link {
     border: 1px solid #fff;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-link:hover,
+.main-link:active,
+.main-link:focus {
+    border-color: #fd9222;
+    color: #fd9222;
 }
 
 .scroll-link {
@@ -260,6 +306,19 @@ address {
     display: flex;
     align-items: center;
     gap: 12px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-link:hover,
+.scroll-link:active,
+.scroll-link:focus {
+    color: #fd9222;
+    .scroll-btn {
+        background: #fd9222;
+    }
+    .scroll-icon {
+        fill: #fafafa;
+    }
 }
 
 .scroll-btn {
@@ -272,12 +331,14 @@ address {
     width: 28px;
     height: 28px;
     cursor: pointer;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .scroll-icon {
     width: 16px;
     height: 16px;
     fill: #fd9222;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*----------------------------------------------------*/
@@ -370,6 +431,8 @@ address {
     width: 24px;
     height: 24px;
     cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tastes-item-image {
@@ -400,6 +463,27 @@ address {
     background-color: #1e1823;
     stroke: #fff;
     color: #fff;
+}
+
+.tastes-item:nth-child(4n + 1) .tastes-item-btn:hover,
+.tastes-item:nth-child(4n + 1) .tastes-item-btn:active,
+.tastes-item:nth-child(4n + 1) .tastes-item-btn:focus {
+    stroke: #fd9222;
+    fill: #fff;
+}
+
+.tastes-item:nth-child(2n) .tastes-item-btn:hover,
+.tastes-item:nth-child(2n) .tastes-item-btn:active,
+.tastes-item:nth-child(2n) .tastes-item-btn:focus {
+    stroke: #fff;
+    fill: #fd9222;
+}
+
+.tastes-item:nth-child(4n + 3) .tastes-item-btn:hover,
+.tastes-item:nth-child(4n + 3) .tastes-item-btn:active,
+.tastes-item:nth-child(4n + 3) .tastes-item-btn:focus {
+    stroke: #1e1823;
+    fill: #fff;
 }
 
 /*------------------------------------------------------*/
@@ -715,6 +799,15 @@ address {
     margin: 0 auto;
     background: transparent;
     cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reviews-btn:hover,
+.reviews-btn:active,
+.reviews-btn:focus {
+    color: #fff;
+    background: #fd9222;
 }
 
 /*-----------------------------------------------*/
@@ -764,6 +857,13 @@ address {
 
 .address-item {
     color: #fff;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-item:hover,
+.address-item:active,
+.address-item:focus {
+    color: #fd9222;
 }
 
 .socials-list {
@@ -777,6 +877,13 @@ address {
     height: 20px;
     fill: transparent;
     stroke: #fff;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-item-link:hover .footer-social-icon,
+.social-item-link:active .footer-social-icon,
+.social-item-link:focus .footer-social-icon {
+    stroke: #fd9222;
 }
 
 .footer-line {
@@ -801,6 +908,15 @@ address {
     font-weight: 500;
     line-height: 1.14;
     color: #fff;
+    .site-ancors-link {
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+.site-ancors-link:hover,
+.site-ancors-link:active,
+.site-ancors-link:focus {
+    color: #fd9222;
 }
 
 .subscribe {
@@ -812,11 +928,19 @@ address {
 }
 
 .email {
-    color: #fff;
+    color: #fd9222;
     padding: 14px 18px;
     border: 1.5px solid rgba(255, 255, 255, 0.15);
     border-radius: 30px;
     background: transparent;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+
+.email:hover,
+.email:focus,
+.email:active {
+    border-color: #fd9222;
 }
 
 .email::placeholder {
@@ -832,6 +956,15 @@ address {
     color: #fff;
     border: none;
     cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:active,
+.subscribe-btn:focus {
+    color: #fd9222;
+    background: #fff;
 }
 
 /*----------------------------------------------*/
@@ -891,6 +1024,13 @@ address {
     height: 24px;
     stroke: #111;
     cursor: pointer;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-close-btn:hover .form-close-icon,
+.form-close-btn:active .form-close-icon,
+.form-close-btn:focus .form-close-icon {
+    stroke: #fd9222;
 }
 
 .review-form-title {
@@ -909,18 +1049,18 @@ address {
     gap: 14px;
 }
 
-.form-field-item{
+.form-field-item {
     position: relative;
-
 }
 
-.form-icon{
+.form-icon {
     width: 18px;
     height: 18px;
     position: absolute;
     top: 50%;
     left: 6%;
     stroke: #111;
+    pointer-events: none;
 }
 
 .field-item-label {
@@ -938,6 +1078,14 @@ address {
     padding: 13px 18px 13px 43px;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
     background: transparent;
+    outline: none;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:hover,
+.form-input:focus,
+.form-input:active {
+    border-color: #fd9222;
 }
 
 .form-comment {
@@ -972,6 +1120,12 @@ address {
     height: 12px;
 }
 
+.form-checkbox:hover,
+.form-checkbox:active,
+.form-checkbox:focus {
+    border-color: #fd9222;
+}
+
 .policy-checkbox:checked + .policy-label .form-checkbox {
     border: none;
     background-color: #fd9222;
@@ -1000,8 +1154,16 @@ address {
     background: #fd9222;
     font-weight: 600;
     color: #fff;
-    border: none;
+    border: 1px solid #fd9222;
     cursor: pointer;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-submit-btn:hover,
+.form-submit-btn:active,
+.form-submit-btn:focus {
+    background: #fff;
+    color: #fd9222;
 }
 
 /*---------------------------------------------------*/
