@@ -1086,9 +1086,7 @@ address {
 .form-input:focus,
 .form-input:active {
     border-color: #fd9222;
-    .form-icon {
-        stroke: #fd9222;
-    }
+    stroke: #fd9222;
 }
 
 .form-comment {
