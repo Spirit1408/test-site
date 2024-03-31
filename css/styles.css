@@ -1061,6 +1061,8 @@ address {
     left: 6%;
     stroke: #111;
     pointer-events: none;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .field-item-label {
@@ -1082,10 +1084,16 @@ address {
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:hover,
-.form-input:focus,
-.form-input:active {
-    border-color: #fd9222;
+.field-item-label:hover,
+.field-item-label:active,
+.field-item-label:focus {
+    .form-input {
+        border-color: #fd9222;
+    }
+    .form-icon {
+        fill: #fd9222;
+        stroke: #fd9222;
+    }
 }
 
 .form-comment {
