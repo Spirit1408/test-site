@@ -1096,6 +1096,10 @@ address {
     }
 }
 
+.input-error{
+    border: 1px solid red;
+}
+
 .form-comment {
     height: 91px;
     resize: none;
