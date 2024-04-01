@@ -1065,6 +1065,17 @@ address {
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-error{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    right: 6%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .field-item-label {
     font-size: 13px;
     color: rgba(64, 64, 64, 0.3);
@@ -1081,23 +1092,34 @@ address {
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
     background: transparent;
     outline: none;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .field-item-label:hover,
 .field-item-label:active,
-.field-item-label:focus{
-    .form-input{
+.field-item-label:focus {
+    .form-input {
         border-color: #fd9222;
     }
-    .form-icon{
+    .form-icon {
         fill: #fd9222;
         stroke: #fd9222;
     }
 }
 
-.input-error{
-    border: 1px solid red;
+.error {
+    .form-input {
+        border-color: #e74a3b;
+    }
+    .form-icon {
+        fill: #e74a3b;
+        stroke: #e74a3b;
+    }
+    .form-error{
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 .form-comment {

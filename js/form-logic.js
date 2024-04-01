@@ -46,3 +46,84 @@ window.onload = function () {
             policyCheckbox.checked = false;
         });
 };
+
+// Функция для проверки имени
+function validateName() {
+    const nameInput = document.getElementById("form-name");
+    const nameLabel = nameInput
+        .closest(".form-field-item")
+        .querySelector(".field-item-label");
+    const nameRegex = /^[a-zA-Z\s]+$/; // Регулярное выражение для проверки имени
+
+    if (!nameRegex.test(nameInput.value)) {
+        nameLabel.classList.add("error");
+    } else {
+        nameLabel.classList.remove("error");
+    }
+}
+
+// Функция для проверки email
+function validateEmail() {
+    const emailInput = document.getElementById("form-email");
+    const emailLabel = emailInput
+        .closest(".form-field-item")
+        .querySelector(".field-item-label");
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Регулярное выражение для проверки email
+
+    if (!emailRegex.test(emailInput.value)) {
+        emailLabel.classList.add("error");
+    } else {
+        emailLabel.classList.remove("error");
+    }
+}
+
+// Функция для проверки номера телефона
+function validatePhoneNumber() {
+    const phoneInput = document.getElementById("form-number");
+    const phoneLabel = phoneInput
+        .closest(".form-field-item")
+        .querySelector(".field-item-label");
+    const phoneRegex = /^[+0-9]+$/; // Регулярное выражение для проверки номера телефона
+
+    if (!phoneRegex.test(phoneInput.value)) {
+        phoneLabel.classList.add("error");
+    } else {
+        phoneLabel.classList.remove("error");
+    }
+}
+
+// Функция для проверки всех полей при отправке формы
+function validateForm(event) {
+    event.preventDefault(); // Отменяем стандартное действие отправки формы
+
+    // Проверяем каждое поле
+    validateName();
+    validateEmail();
+    validatePhoneNumber();
+
+    // Если хотя бы одно поле имеет класс input-error, форма не будет отправлена
+    const inputs = document.querySelectorAll(".form-input");
+    let isValid = true;
+    inputs.forEach((input) => {
+        const inputLabel = input
+            .closest(".form-field-item")
+            .querySelector(".field-item-label");
+        if (inputLabel.classList.contains("error")) {
+            isValid = false;
+        }
+    });
+
+    if (isValid) {
+        document.getElementById("review-form").submit();
+    }
+}
+
+// Добавляем обработчики событий для каждого поля
+document.getElementById("form-name").addEventListener("blur", validateName);
+document.getElementById("form-email").addEventListener("blur", validateEmail);
+document
+    .getElementById("form-number")
+    .addEventListener("blur", validatePhoneNumber);
+
+// Добавляем обработчик события отправки формы
+document.getElementById("review-form").addEventListener("submit", validateForm);
