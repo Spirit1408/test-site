@@ -139,18 +139,20 @@
                     </h1>
 
                     <div class="main-links">
-                        <button
-                            type="button"
-                            class="main-btn"
-                            id="main-btn">
-                            Buy now
-                        </button>
-
-                        <a
-                            href="#how-its-made"
-                            class="main-link"
-                            >How it's made</a
-                        >
+                        <div class="main-btns">
+                            <button
+                                type="button"
+                                class="main-btn"
+                                id="main-btn">
+                                Buy now
+                            </button>
+    
+                            <a
+                                href="#how-its-made"
+                                class="main-link"
+                                >How it's made</a
+                            >
+                        </div>
 
                         <a
                             href="#footer"
@@ -517,10 +519,12 @@
                 </h2>
 
                 <div class="procedure-block">
-                    <img
-                        class="procedure-image"
-                        src="./images/plate.jpg"
-                        alt="plate with chocolate" />
+                    <picture class="procedure-image">
+                        <source media="(min-width: 768px)" srcset="./images/plate-t.jpg">
+                        <img
+                            src="./images/plate.jpg"
+                            alt="plate with chocolate" />
+                    </picture>
 
                     <div class="procedure-subblock">
                         <h3 class="procedure-subtitle">
