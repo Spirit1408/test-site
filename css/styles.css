@@ -1105,6 +1105,9 @@ address {
     outline: none;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
         stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 13px;
+    letter-spacing: -0.02em;
+    color: #404040;
 }
 
 .field-item-label:hover,
@@ -1488,7 +1491,7 @@ address {
         font-size: 18px;
         padding: 14px 40px;
     }
-    
+
     .footer {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -1511,7 +1514,7 @@ address {
         gap: 32px;
     }
 
-    .footer-address{
+    .footer-address {
         order: 1;
     }
 
@@ -1540,5 +1543,67 @@ address {
     .subscribe-btn {
         padding: 14px 28px;
         width: 128px;
+    }
+
+    /*----------------------------------------------------------------------------*/
+
+    .review-form-block {
+        max-width: 517px;
+        padding: 40px;
+    }
+
+    .form-close-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .review-form-title {
+        font-size: 24px;
+        line-height: 1.17;
+        max-width: 298px;
+        margin-bottom: 40px;
+    }
+
+    .form-error {
+        width: 24px;
+        height: 24px;
+        top: 45%;
+    }
+
+    .form-icon {
+        width: 24px;
+        height: 24px;
+        top: 45%;
+    }
+
+    .field-item-label {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .form-input {
+        height: 68px;
+        padding: 22px 24px 22px 62px;
+        outline: none;
+        font-size: 18px;
+    }
+
+    .form-comment {
+        height: 137px;
+        padding: 22px 24px;
+    }
+
+    .form-comment::placeholder {
+        font-size: 18px;
+    }
+
+    .policy-label {
+        font-size: 14px;
+        align-items: center;
+    }
+
+    .form-submit-btn {
+        margin-top: 40px;
+        padding: 14px 40px;
     }
 }
