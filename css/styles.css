@@ -412,7 +412,7 @@ address {
 }
 
 .tastes-title {
-    padding-bottom: 27px;
+    margin-bottom: 27px;
 }
 
 .tastes-list {
@@ -1068,7 +1068,7 @@ address {
     gap: 4px;
 }
 
-.field-item-input{
+.field-item-input {
     position: relative;
 }
 
@@ -1360,7 +1360,7 @@ address {
     }
 
     .tastes-title {
-        padding-bottom: 50px;
+        margin-bottom: 50px;
     }
 
     .tastes-list {
@@ -1383,13 +1383,13 @@ address {
     }
 
     .procedure-block {
-        margin: 0 auto;
         max-width: 614px;
+        margin: 0 auto;
     }
 
     .procedure-subblock {
-        padding: 32px;
         width: 614px;
+        padding: 32px;
     }
 
     .procedure-subtitle {
@@ -1397,7 +1397,7 @@ address {
         max-width: 350px;
     }
 
-    .procedure-item-text {
+    .procedure-item {
         max-width: 464px;
     }
 
@@ -1548,8 +1548,6 @@ address {
         width: 128px;
     }
 
-    /*----------------------------------------------------------------------------*/
-
     .review-form-block {
         max-width: 517px;
         padding: 40px;
@@ -1567,7 +1565,7 @@ address {
         margin-bottom: 40px;
     }
 
-    .form-field-list{
+    .form-field-list {
         gap: 18px;
     }
 
@@ -1609,5 +1607,91 @@ address {
     .form-submit-btn {
         margin-top: 40px;
         padding: 14px 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .navigation {
+        padding-top: 26px;
+        padding-bottom: 34px;
+    }
+
+    .logo-link {
+        font-size: 18px;
+        line-height: 1.11;
+    }
+
+    .logo-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .menu-list {
+        margin-right: 90px;
+    }
+
+    .main-block {
+        background-image: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0),
+                rgba(17, 17, 17, 0.4)
+            ),
+            url("../images/hero-d.jpg");
+        padding: 381px 40px 40px;
+    }
+
+    .benefits-list {
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 88px;
+    }
+
+    .benefits-item {
+        max-width: calc((100% - 88px * 2) / 3);
+        position: relative;
+    }
+
+    .benefits-item:nth-child(2)::before,
+    .benefits-item:nth-child(3)::before {
+        content: "";
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        width: 0px;
+        height: 124px;
+        position: absolute;
+        top: 50%;
+        left: -44px;
+        transform: translateY(-50%);
+    }
+
+    .section-title {
+        width: 412px;
+    }
+
+    .tastes {
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .tastes-item {
+        max-width: 260px;
+        width: calc((100% - 32px * 3) / 4);
+    }
+
+    .tastes-item-image {
+        width: 214px;
+        height: 160px;
+        margin-bottom: 36px;
+    }
+
+    .tastes-card {
+        padding: 20px 15px;
+    }
+
+    .card-tags-list {
+        margin-bottom: 10px;
     }
 }
