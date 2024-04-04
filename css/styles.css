@@ -1539,6 +1539,7 @@ address {
 
     .review-form-block {
         max-width: 517px;
+        width: 517px;
         padding: 40px;
     }
 
@@ -1793,7 +1794,6 @@ address {
     }
 
     .review-form-block {
-        width: 517px;
         transform: scale(0.7);
     }
 }
