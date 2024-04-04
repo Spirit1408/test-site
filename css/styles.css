@@ -697,11 +697,6 @@ address {
     position: relative;
 }
 
-.sellers-image {
-    max-width: 335px;
-    max-height: 464px;
-}
-
 .sellers-subtitle {
     padding-top: 24px;
     padding-bottom: 24px;
@@ -734,6 +729,8 @@ address {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .sellers-image-block:hover .sellers-overlay,
@@ -744,8 +741,6 @@ address {
 
 .sellers-overlay-text {
     color: #fafafa;
-    max-width: 295px;
-    margin: 0 auto;
 }
 
 /*-----------------------------------------------*/
@@ -959,6 +954,9 @@ address {
 }
 
 .subscribe-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 100px;
     padding: 14px 26px;
     background: #fd9222;
@@ -1383,7 +1381,7 @@ address {
     }
 
     .procedure-block {
-        max-width: 614px;
+        width: 614px;
         margin: 0 auto;
     }
 
@@ -1397,7 +1395,7 @@ address {
         max-width: 350px;
     }
 
-    .procedure-item {
+    .procedure-item-text {
         max-width: 464px;
     }
 
@@ -1445,23 +1443,14 @@ address {
         overflow: hidden;
     }
 
-    .sellers-image-block {
-        position: relative;
-    }
-
-    .sellers-image {
-        max-width: 344px;
-    }
-
     .sellers-subtitle {
         padding-top: 28px;
         padding-bottom: 28px;
     }
 
-    .sellers-image-block:hover .sellers-overlay,
-    .sellers-image-block:focus .sellers-overlay,
-    .sellers-image-block:active .sellers-overlay {
-        opacity: 1;
+    .sellers-overlay {
+        padding-left: 32px;
+        padding-right: 32px;
     }
 
     .reviews {
@@ -1693,5 +1682,118 @@ address {
 
     .card-tags-list {
         margin-bottom: 10px;
+    }
+
+    .procedure {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .procedure-block {
+        flex-direction: row;
+        width: 100%;
+        height: 400px;
+    }
+
+    .procedure-image {
+        height: 400px;
+        width: 600px;
+    }
+
+    .procedure-subblock {
+        width: 516px;
+        height: 400px;
+        padding: 32px;
+    }
+
+    .procedure-subtitle {
+        max-width: 350px;
+    }
+
+    .procedure-list {
+        gap: 24px;
+    }
+
+    .procedure-item-text {
+        max-width: unset;
+    }
+
+    .products {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .products-list {
+        flex-direction: row;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .products-item {
+        padding: 32px 20px;
+        width: calc((100% - 18px * 3) / 4);
+    }
+
+    .sellers {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .sellers-item {
+        max-width: 368px;
+        width: calc((100% - 16px * 2) / 3);
+    }
+
+    .sellers-overlay {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .reviews {
+        padding-top: 60px;
+        padding-bottom: 120px;
+    }
+
+    .reviews-list {
+        gap: 16px;
+    }
+
+    .reviews-item {
+        max-width: 360px;
+        width: calc((100% - 16px * 2) / 3);
+        height: 200px;
+    }
+
+    .footer-contacts {
+        gap: 50px;
+    }
+
+    .footer-social-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .site-ancors-list {
+        gap: 24px;
+    }
+
+    .email {
+        padding: 13px 24px;
+        width: 313px;
+        height: 52px;
+    }
+
+    .email::placeholder {
+        font-size: 18px;
+    }
+
+    .subscribe-btn {
+        padding: 17px 40px;
+        width: 137px;
+    }
+
+    .review-form-block {
+        width: 517px;
+        transform: scale(0.7);
     }
 }
